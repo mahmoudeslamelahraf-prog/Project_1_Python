@@ -1,19 +1,27 @@
-choice = input("choose [*,-,+,/]")
+choice = input("Choose [*,-,+,/]: ")
 
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
 
 if choice == '*':
-    print("MULTIPLYING")
+    total = num1 * num2
+
 elif choice == '-':
-    print("MINUS")
+    total = num1 - num2
+
 elif choice == '+':
-    print("PLUS")
+    total = num1 + num2
+
 elif choice == '/':
-    print("divide")
+    total = num1 / num2
+
 else:
-    print("you have choosed something i don't know ")
+    print("You have chosen something I don't know")
+    total = None
 
-num1 = int(input("Enter the frist number: "))
-num2 = int(input("Enter the sec number: "))
-total = num1 + num2
-print(f"{num1} + {num2} = {total}")
+if total is not None:
+    print(f"{num1} {choice} {num2} = {total}")
 
+
+
+    
